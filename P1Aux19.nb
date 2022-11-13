@@ -1,0 +1,257 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9140,        247]
+NotebookOptionsPosition[      8110,        224]
+NotebookOutlinePosition[      8504,        240]
+CellTagsIndexPosition[      8461,        237]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["P1 Auxiliar 19 2022-2", "Title"]], "Text",
+ CellChangeTimes->{{3.8773552660050087`*^9, 
+  3.877355276904826*^9}},ExpressionUUID->"5e021d80-78da-411c-9e99-\
+c647e6d75d3f"],
+
+Cell["Definimos las constantes del problema", "Text",
+ CellChangeTimes->{{3.877355298039714*^9, 
+  3.8773553163245707`*^9}},ExpressionUUID->"f75b79d8-a3a5-4733-9415-\
+2e9f5c7a0bfc"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"m", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"G", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"epsilon", "=", "1.2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v0", "=", 
+   RowBox[{
+    RowBox[{"Sqrt", "[", 
+     RowBox[{"G", "*", 
+      RowBox[{"M", "/", 
+       RowBox[{"(", 
+        RowBox[{"R", "+", "h"}], ")"}]}]}], "]"}], "*", "epsilon"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v0scape", "=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"G", "*", 
+     RowBox[{"M", "/", 
+      RowBox[{"(", 
+       RowBox[{"R", "+", "h"}], ")"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Beta]", "=", 
+   RowBox[{"Pi", "/", "2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l", "=", 
+   RowBox[{"m", "*", 
+    RowBox[{"(", 
+     RowBox[{"R", "+", "h"}], ")"}], "*", "v0", "*", 
+    RowBox[{"Sin", "[", "\[Beta]", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Rtilde", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"l", "^", "2"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"G", "*", "M", "*", 
+      RowBox[{"m", "^", "2"}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"En", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "/", "2"}], "*", "m", "*", 
+     RowBox[{"v0", "^", "2"}]}], "-", 
+    RowBox[{"G", "*", "m", "*", 
+     RowBox[{"M", "/", 
+      RowBox[{"(", 
+       RowBox[{"R", "+", "h"}], ")"}]}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ex", "=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"1", "+", 
+     RowBox[{"2", "*", "En", "*", 
+      RowBox[{
+       RowBox[{"l", "^", "2"}], "/", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"G", "*", "M"}], ")"}], "^", "2"}], "*", 
+         RowBox[{"m", "^", "3"}]}], ")"}]}]}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.877355327535133*^9, 3.8773553283123903`*^9}, {
+  3.8773554373384037`*^9, 3.87735543745417*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"877fe72f-c93d-4db7-a794-94497c50f229"],
+
+Cell["As\[IAcute] que la trayectoria se escribir\[IAcute]a como", "Text",
+ CellChangeTimes->{{3.877355340038892*^9, 
+  3.87735534802094*^9}},ExpressionUUID->"ff658ccb-48e0-4e3c-aa23-\
+3dd10b2328c8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Rho]", "[", "\[Phi]_", "]"}], ":=", 
+  RowBox[{"Rtilde", "/", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{"ex", "*", 
+      RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}], ")"}]}]}]], "Input",
+ CellLabel->"In[16]:=",ExpressionUUID->"41663624-b31b-4231-9353-2eb3545984a7"],
+
+Cell["Grafiquemos esto", "Text",
+ CellChangeTimes->{{3.877355360291719*^9, 
+  3.8773553657809896`*^9}},ExpressionUUID->"77c6624f-c9fd-4d26-bce1-\
+c869572a0789"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Theta]0", "=", "0.1"}], ";"}], "\n", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Rho]", "[", "\[Theta]", "]"}], "*", 
+        RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"\[Rho]", "[", "\[Theta]", "]"}], "*", 
+        RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", "\[Theta]0", ",", "\[Theta]p"}], "}"}], ",", 
+     RowBox[{"AxesOrigin", "->", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+     RowBox[{"PlotRange", "->", "All"}], ",", 
+     RowBox[{"Epilog", "->", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"Blue", ",", 
+          RowBox[{"PointSize", "[", "0.05", "]"}], ",", 
+          RowBox[{"Point", "@", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Red", ",", 
+          RowBox[{"PointSize", "[", "0.025", "]"}], ",", 
+          RowBox[{"Point", "@", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"\[Rho]", "[", "\[Theta]p", "]"}], "*", 
+              RowBox[{"Cos", "[", "\[Theta]p", "]"}]}], ",", 
+             RowBox[{
+              RowBox[{"\[Rho]", "[", "\[Theta]p", "]"}], "*", 
+              RowBox[{"Sin", "[", "\[Theta]p", "]"}]}]}], "}"}]}]}], "}"}]}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]p", ",", 
+     RowBox[{"1.000001", " ", "\[Theta]0"}], ",", 
+     RowBox[{"\[Theta]0", "+", 
+      RowBox[{"10", " ", "\[Pi]"}]}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.877355371813848*^9, 3.8773554200244017`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"0ac1563a-4c69-4d72-bd6e-c1c0905e1dca"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Theta]p$$ = 7.7849052684916735`, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Theta]p$$], 0.1000001, 31.515926535897933`}}, 
+    Typeset`size$$ = {360., {159., 164.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Theta]p$$ = 0.1000001}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      ParametricPlot[{$CellContext`\[Rho][$CellContext`\[Theta]] 
+         Cos[$CellContext`\[Theta]], \
+$CellContext`\[Rho][$CellContext`\[Theta]] 
+         Sin[$CellContext`\[Theta]]}, {$CellContext`\[Theta], $CellContext`\
+\[Theta]0, $CellContext`\[Theta]p$$}, AxesOrigin -> {0, 0}, PlotRange -> All, 
+        Epilog -> {{Blue, 
+           PointSize[0.05], 
+           Point[{0, 0}]}, {Red, 
+           PointSize[0.025], 
+           
+           Point[{$CellContext`\[Rho][$CellContext`\[Theta]p$$] 
+             Cos[$CellContext`\[Theta]p$$], $CellContext`\[Rho][$CellContext`\
+\[Theta]p$$] Sin[$CellContext`\[Theta]p$$]}]}}], 
+      "Specifications" :> {{$CellContext`\[Theta]p$$, 0.1000001, 
+         31.515926535897933`}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {218., 224.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.877355423597822*^9, 3.877355431205719*^9}},
+ CellLabel->"Out[2]=",ExpressionUUID->"45471913-c1f8-4819-8a92-9e8dcff007ac"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 683}, {177, Automatic}},
+FrontEndVersion->"12.3 for Mac OS X ARM (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a6ac485f-730e-4afc-b2fc-a58cf49b74d2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 194, 3, 73, "Text",ExpressionUUID->"5e021d80-78da-411c-9e99-c647e6d75d3f"],
+Cell[755, 25, 181, 3, 35, "Text",ExpressionUUID->"f75b79d8-a3a5-4733-9415-2e9f5c7a0bfc"],
+Cell[939, 30, 2290, 71, 338, "Input",ExpressionUUID->"877fe72f-c93d-4db7-a794-94497c50f229"],
+Cell[3232, 103, 198, 3, 35, "Text",ExpressionUUID->"ff658ccb-48e0-4e3c-aa23-3dd10b2328c8"],
+Cell[3433, 108, 311, 8, 30, "Input",ExpressionUUID->"41663624-b31b-4231-9353-2eb3545984a7"],
+Cell[3747, 118, 160, 3, 35, "Text",ExpressionUUID->"77c6624f-c9fd-4d26-bce1-c869572a0789"],
+Cell[CellGroupData[{
+Cell[3932, 125, 1874, 49, 136, "Input",ExpressionUUID->"0ac1563a-4c69-4d72-bd6e-c1c0905e1dca"],
+Cell[5809, 176, 2285, 45, 461, "Output",ExpressionUUID->"45471913-c1f8-4819-8a92-9e8dcff007ac"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
